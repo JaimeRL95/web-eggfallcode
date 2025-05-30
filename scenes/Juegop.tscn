@@ -1,0 +1,188 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://scenes/Nido.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Juegop.gd" type="Script" id=2]
+[ext_resource path="res://images/nido2sinfondow.png" type="Texture" id=3]
+[ext_resource path="res://images/image.png" type="Texture" id=4]
+[ext_resource path="res://scenes/Timer.gd" type="Script" id=5]
+[ext_resource path="res://scenes/Eggspawner.gd" type="Script" id=6]
+[ext_resource path="res://scenes/Huevo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Label.gd" type="Script" id=8]
+[ext_resource path="res://images/corason.png" type="Texture" id=9]
+[ext_resource path="res://images/boton de pausa.png" type="Texture" id=10]
+[ext_resource path="res://scenes/GameOverPopup.gd" type="Script" id=11]
+[ext_resource path="res://images/reintentar.png" type="Texture" id=12]
+[ext_resource path="res://images/Menu Principal.png" type="Texture" id=13]
+[ext_resource path="res://images/Tiendaplank.png" type="Texture" id=14]
+[ext_resource path="res://images/gameover2finsf.png" type="Texture" id=15]
+[ext_resource path="res://images/reanudar.png" type="Texture" id=16]
+[ext_resource path="res://images/pausa.png" type="Texture" id=17]
+[ext_resource path="res://scenes/PausePopup.gd" type="Script" id=18]
+[ext_resource path="res://images/goldenhuevos.png" type="Texture" id=19]
+[ext_resource path="res://scenes/TotalHuevosLabel.gd" type="Script" id=20]
+[ext_resource path="res://images/minitienda.png" type="Texture" id=21]
+[ext_resource path="res://images/minimenuprincipal.png" type="Texture" id=22]
+[ext_resource path="res://images/minireintentar.png" type="Texture" id=23]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 82, 31 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.3
+autostart = true
+script = ExtResource( 5 )
+huevo_escena = ExtResource( 7 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 727.0
+margin_bottom = 1280.0
+rect_pivot_offset = Vector2( 595, 35 )
+texture = ExtResource( 4 )
+
+[node name="Nido" type="Area2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nido"]
+position = Vector2( 376, 1041 )
+shape = SubResource( 1 )
+
+[node name="Spritenido" type="Sprite" parent="Nido"]
+position = Vector2( 386, 1053 )
+scale = Vector2( 0.875613, 0.819527 )
+texture = ExtResource( 3 )
+
+[node name="Eggspawner" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 14.0
+margin_top = 1191.0
+margin_right = 135.0
+margin_bottom = 1251.0
+text = "
+"
+script = ExtResource( 8 )
+
+[node name="corazon1" type="TextureRect" parent="."]
+margin_left = 587.0
+margin_top = 8.0
+margin_right = 655.0
+margin_bottom = 68.0
+texture = ExtResource( 9 )
+
+[node name="corazon2" type="TextureRect" parent="."]
+margin_left = 507.0
+margin_top = 9.0
+margin_right = 575.0
+margin_bottom = 69.0
+texture = ExtResource( 9 )
+
+[node name="corazon3" type="TextureRect" parent="."]
+margin_left = 429.0
+margin_top = 9.0
+margin_right = 497.0
+margin_bottom = 69.0
+texture = ExtResource( 9 )
+
+[node name="GameOverPopup" type="CanvasLayer" parent="."]
+script = ExtResource( 11 )
+
+[node name="Fondomenu" type="TextureRect" parent="GameOverPopup"]
+margin_left = 139.0
+margin_top = 117.0
+margin_right = 657.0
+margin_bottom = 598.0
+texture = ExtResource( 15 )
+
+[node name="Reintentar" type="TextureButton" parent="GameOverPopup/Fondomenu"]
+margin_left = 163.0
+margin_top = 256.0
+margin_right = 378.0
+margin_bottom = 335.0
+texture_normal = ExtResource( 23 )
+
+[node name="MenuPrincipal" type="TextureButton" parent="GameOverPopup/Fondomenu"]
+margin_left = 163.0
+margin_top = 317.0
+margin_right = 380.0
+margin_bottom = 394.0
+texture_normal = ExtResource( 22 )
+
+[node name="Tienda" type="TextureButton" parent="GameOverPopup/Fondomenu"]
+margin_left = 166.0
+margin_top = 381.0
+margin_right = 380.0
+margin_bottom = 462.0
+texture_normal = ExtResource( 21 )
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+script = ExtResource( 18 )
+
+[node name="Fondopausa" type="TextureRect" parent="PauseMenu"]
+margin_left = 63.0
+margin_top = 260.0
+margin_right = 673.0
+margin_bottom = 842.0
+texture = ExtResource( 17 )
+
+[node name="Reintentar" type="TextureButton" parent="PauseMenu/Fondopausa"]
+margin_left = 184.0
+margin_top = 240.0
+margin_right = 399.0
+margin_bottom = 319.0
+texture_normal = ExtResource( 12 )
+
+[node name="MenuPrincipal" type="TextureButton" parent="PauseMenu/Fondopausa"]
+margin_left = 184.0
+margin_top = 334.0
+margin_right = 401.0
+margin_bottom = 411.0
+texture_normal = ExtResource( 13 )
+
+[node name="Tienda" type="TextureButton" parent="PauseMenu/Fondopausa"]
+margin_left = 186.0
+margin_top = 432.0
+margin_right = 400.0
+margin_bottom = 513.0
+texture_normal = ExtResource( 14 )
+
+[node name="Reanudar" type="TextureButton" parent="PauseMenu/Fondopausa"]
+margin_left = 186.0
+margin_top = 144.0
+margin_right = 400.0
+margin_bottom = 222.0
+texture_normal = ExtResource( 16 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 180.0
+margin_top = -15.0
+margin_right = 278.0
+margin_bottom = 73.0
+texture = ExtResource( 19 )
+
+[node name="TotalHuevosLabel" type="Label" parent="."]
+margin_left = 278.0
+margin_top = 11.0
+margin_right = 358.0
+margin_bottom = 69.0
+script = ExtResource( 20 )
+
+[node name="BotonPausa" type="TextureButton" parent="."]
+margin_left = 8.0
+margin_top = -11.0
+margin_right = 108.0
+margin_bottom = 89.0
+texture_normal = ExtResource( 10 )
+
+[connection signal="pressed" from="GameOverPopup/Fondomenu/Reintentar" to="GameOverPopup" method="_on_Reintentar_pressed"]
+[connection signal="pressed" from="GameOverPopup/Fondomenu/MenuPrincipal" to="GameOverPopup" method="_on_MenuPrincipal_pressed"]
+[connection signal="pressed" from="GameOverPopup/Fondomenu/Tienda" to="GameOverPopup" method="_on_Tienda_pressed"]
+[connection signal="pressed" from="PauseMenu/Fondopausa/Reintentar" to="PauseMenu" method="_on_Reintentar_pressed"]
+[connection signal="pressed" from="PauseMenu/Fondopausa/MenuPrincipal" to="PauseMenu" method="_on_MenuPrincipal_pressed"]
+[connection signal="pressed" from="PauseMenu/Fondopausa/Tienda" to="PauseMenu" method="_on_Tienda_pressed"]
+[connection signal="pressed" from="PauseMenu/Fondopausa/Reanudar" to="PauseMenu" method="_on_Reanudar_pressed"]
+[connection signal="pressed" from="BotonPausa" to="." method="_on_BotonPausa_pressed"]
