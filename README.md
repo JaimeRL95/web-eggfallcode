@@ -24,8 +24,8 @@ Desde el editor de Godot, presiona F5 o haz clic en “Play” para ejecutar el 
 Puedes interactuar con el menú principal, probar las escenas de juego y tienda.
 
 ## **📱 Despliegue en Android** ##
-Si lo haces desde un dispositivo movil simplemente descarga EGGFALL.apk. espera
-a que se descargue y pulse instalar, tras eso, toque el icono del juego y se ejecutará.
+Si lo haces desde un dispositivo movil simplemente descarga EGGFALL.apk. (el cual no se encuentra en github porque pesa demasiado, estará adjuntado en la tarea) 
+espera a que se descargue y pulse instalar, tras eso, toque el icono del juego y se ejecutará.
 
 Si lo desea hacer desde un emulador o editor y luego instalarlo en el movil:
 Configura la exportación a Android:
