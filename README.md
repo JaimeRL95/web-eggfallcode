@@ -1,6 +1,6 @@
 # web-eggfallcode
 Página web de muestra de archivos y documentos referenciados en el proyecto "EGGFALL"
-Instrucciones de Despliegue:
+# **Instrucciones de Despliegue:** #
 ⚙Requisitos del Sistema
 Godot Engine versión 3.x
 
@@ -10,22 +10,22 @@ Android SDK + OpenJDK para exportar a Android (opcional)
 
 Dispositivo Android (opcional, para pruebas móviles)
 
-🚀 Configuración Inicial
+### **🚀 Configuración Inicial** ##
 Clona o descarga el repositorio:
 ```
 git clone https://github.com/usuario/nombre-del-proyecto.git
 cd nEGGFALL
 ````
 
-Ejecución en Escritorio
+## **Ejecución en Escritorio** ##
 Descarge el .zip y abralo desde Godot Engine.
 Desde el editor de Godot, presiona F5 o haz clic en “Play” para ejecutar el juego.
 
 Puedes interactuar con el menú principal, probar las escenas de juego y tienda.
 
-📱 Despliegue en Android
+## **📱 Despliegue en Android** ##
 Si lo haces desde un dispositivo movil simplemente descarga EGGFALL.apk. espera
-a que se descargue y pulse instalar, tras eso, toque el icono del juego y se ejecutará
+a que se descargue y pulse instalar, tras eso, toque el icono del juego y se ejecutará.
 
 Si lo desea hacer desde un emulador o editor y luego instalarlo en el movil:
 Configura la exportación a Android:
