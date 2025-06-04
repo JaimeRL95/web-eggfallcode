@@ -2,11 +2,11 @@ extends Timer
 
 export (PackedScene) var huevo_escena
 
-var velocidad_minima = 0.3
-var decremento = 0.05
+var velocidad_minima = 0.08
+var decremento = 0.035
 var velocidad_huevo = 185  # velocidad inicial de caída
-var incremento_velocidad = 3  # cuanto se incrementa la velocidad cada vez
-var velocidad_maxima = 500  # límite superior de velocidad de caída
+var incremento_velocidad = 1.45  # cuanto se incrementa la velocidad cada vez
+var velocidad_maxima = 453  # límite superior de velocidad de caída
 
 func _ready():
 	randomize()
