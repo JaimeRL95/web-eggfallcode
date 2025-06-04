@@ -32,7 +32,7 @@ func _on_huevo_atrapado():
 func _on_huevo_perdido():
 	huevos_perdidos += 1
 
-	if huevos_perdidos % 3 == 0:  # Cada 3 huevos perdidos pierdes una vida
+	if huevos_perdidos % 1 == 0:  # Cada 3 huevos perdidos pierdes una vida
 		vidas -= 1
 		actualizar_corazones()
 
