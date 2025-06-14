@@ -58,16 +58,16 @@ texture = ExtResource( 4 )
 [node name="Timer" type="Timer" parent="Popup"]
 
 [node name="TotalHuevosLabel" type="Label" parent="."]
-margin_left = 613.0
-margin_top = 927.0
-margin_right = 693.0
-margin_bottom = 985.0
+margin_left = 546.0
+margin_top = 935.0
+margin_right = 626.0
+margin_bottom = 993.0
 script = ExtResource( 9 )
 
 [node name="TextureRect2" type="TextureRect" parent="."]
-margin_left = 515.0
+margin_left = 451.0
 margin_top = 901.0
-margin_right = 613.0
+margin_right = 552.0
 margin_bottom = 989.0
 texture = ExtResource( 10 )
 

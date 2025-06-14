@@ -31,10 +31,10 @@ func _on_NidoMejoradoBoton_pressed():
 		mover_flecha($NidoMejoradoBoton)
 		guardar_datos()
 	else:
-		if huevos >= 200:
-			yield(mostrar_popup_confirmacion("¿Desbloquear por 200 huevos dorados?"), "completed")
+		if huevos >= 2000:
+			yield(mostrar_popup_confirmacion("¿Desbloquear por 2000 huevos dorados?"), "completed")
 
-			huevos -= 200
+			huevos -= 2000
 			nido_desbloqueado = true
 			nido_seleccionado = "mejorado"
 			mover_flecha($NidoMejoradoBoton)
