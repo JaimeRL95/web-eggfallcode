@@ -6,7 +6,6 @@ func _on_nuevapartida_pressed():
 	var dir = Directory.new()
 	if dir.file_exists("user://datos_guardados.json"):
 		dir.remove("user://datos_guardados.json")
-
 	get_tree().change_scene("res://scenes/Juegop.tscn")
 
 	

@@ -14,7 +14,7 @@ func _on_area_entered(area):
 # 
 
 #	pass
-var velocidad = 185  # píxeles por segundo.
+var velocidad = 370  # píxeles por segundo.
 func _process(delta):
 	position.y += velocidad * delta
 	var pantalla_alto = get_viewport().size.y

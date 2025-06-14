@@ -11,10 +11,6 @@ func _ready():
 	if File.new().file_exists("user://datos_guardados.json"):
 		cargar_datos()
 		
-		if nido_seleccionado == "mejorado":
-			$Nido/Spritenido.texture = preload("res://Images/betternido.png")
-		else:
-			$Nido/Spritenido.texture = preload("res://Images/nido2sinfondow.png")
 	else:
 		# Se asegura de iniciar con los valores por defecto
 		huevos_perdidos = 0
@@ -23,7 +19,7 @@ func _ready():
 		$Label.text = "Huevos atrapados: " + str(nuevos_huevos)
 
 func _on_huevo_atrapado():
-	huevos_atrapados += 0.3
+	huevos_atrapados += 1
 	nuevos_huevos += 1
 	$Label.text = "Huevos atrapados: " + str(nuevos_huevos)
 	$TotalHuevosLabel.text = "X" + str(huevos_atrapados)
@@ -46,6 +42,15 @@ func actualizar_corazones():
 		$corazon2.visible = false
 	if vidas < 1:
 		$corazon1.visible = false
+		
+		
+		
+func _on_roca_golpeada():
+	vidas -= 1
+	actualizar_corazones()
+	if vidas <= 0:
+		game_over()
+
 
 func game_over():
 	guardar_datos()
